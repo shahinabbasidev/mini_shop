@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from account.models import User
+from account.models import User, Otp
 from account.forms import UserCreationForm, UserChangeForm
 
 
@@ -38,6 +38,7 @@ class UserAdmin(BaseUserAdmin):
 
 # ثبت UserAdmin
 admin.site.register(User, UserAdmin)
+admin.site.register(Otp)
 
 # حذف گروه‌ها از ادمین چون استفاده نمی‌شوند
 admin.site.unregister(Group)

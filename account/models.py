@@ -39,7 +39,9 @@ class User(AbstractBaseUser):
         unique=True,
     )
     full_name = models.CharField(max_length=30, verbose_name="full name", blank=True, null=True)
-    phone = models.CharField(max_length=13, verbose_name="phone number", unique=True)
+    phone = models.CharField(max_length=13, verbose_name="phone number", unique=True, null=True, blank=True)
+    is_admin = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(verbose_name="date joined", default=timezone.now)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
@@ -60,3 +62,11 @@ class User(AbstractBaseUser):
     def has_module_perms(self, app_label):
         return True
 
+
+class Otp(models.Model):
+    phone = models.CharField(max_length=13)
+    code = models.SmallIntegerField(null=True, blank=True)
+    expires = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.phone

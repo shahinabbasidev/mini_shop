@@ -1,3 +1,5 @@
+from django.core import validators
+
 from django import forms
 from django.core.exceptions import ValidationError
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
@@ -49,3 +51,13 @@ class LoginForm(forms.Form):
     password = forms.CharField(
         widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": "Password"})
     )
+
+
+class RegisterForm(forms.Form):
+    phone = forms.CharField(
+        widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "phone number"}),
+        validators=[validators.MaxLengthValidator(11)]
+    )
+
+class CheckOtpForm(forms.Form):
+    code = forms.CharField(widget=forms.TextInput(attrs={"class": "form-control"}),validators=[validators.MaxLengthValidator(4)])
