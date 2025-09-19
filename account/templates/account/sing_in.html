@@ -41,11 +41,11 @@
                 <form action="#" method="post">
                     {% csrf_token %}
                   <div class="form-group first">
-                    <label for="username">phone</label>
-                      {% for error in form.phone.errors %}
+                    <label for="username">username</label>
+                      {% for error in form.non_field_errors %}
                           <p class="alert-danger">{{ error }}</p>
                       {% endfor %}
-                    {{ form.phone }}
+                    {{ form.username }}
 
                   </div>
                   <div class="form-group last mb-4">

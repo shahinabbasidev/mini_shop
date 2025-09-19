@@ -64,6 +64,7 @@ class User(AbstractBaseUser):
 
 
 class Otp(models.Model):
+    token = models.CharField(max_length=200,null=True,blank=True)
     phone = models.CharField(max_length=13)
     code = models.SmallIntegerField(null=True, blank=True)
     expires = models.DateTimeField(default=timezone.now)

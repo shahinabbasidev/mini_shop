@@ -45,19 +45,27 @@ class UserChangeForm(forms.ModelForm):
 
 
 class LoginForm(forms.Form):
-    phone = forms.CharField(
-        widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "Phone number"})
+    username = forms.CharField(
+        widget=forms.TextInput(attrs={"class": "form-control"})
     )
     password = forms.CharField(
-        widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": "Password"})
+        widget=forms.PasswordInput(attrs={"class": "form-control"})
     )
 
+    def clean_username(self):
+        username = self.cleaned_data["username"]
+        if len(username) > 100:
+            raise ValidationError("Invalid value: %(value)s is invalid.", code="invalid",
+                                  params={'value': f'{username}'})
+        return username
 
-class RegisterForm(forms.Form):
+
+class OtpLoginForm(forms.Form):
     phone = forms.CharField(
         widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "phone number"}),
         validators=[validators.MaxLengthValidator(11)]
     )
 
 class CheckOtpForm(forms.Form):
-    code = forms.CharField(widget=forms.TextInput(attrs={"class": "form-control"}),validators=[validators.MaxLengthValidator(4)])
+    code = forms.CharField(widget=forms.TextInput(attrs={"class": "form-control"}),
+                           validators=[validators.MaxLengthValidator(4)])
