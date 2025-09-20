@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login , logout
 from django.contrib.auth import get_user_model
 from django.shortcuts import render, redirect, reverse
 from django.views import View
@@ -97,3 +97,7 @@ class CheckOtpView(View):
 
             return render(request, "account/check_otp.html", {"form": form})
 
+
+def user_logout(request):
+    logout(request)
+    return redirect("/")
