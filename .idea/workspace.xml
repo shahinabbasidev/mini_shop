@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="912a62a5-d1f6-4a01-970b-251ac4a94d73" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mini_shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mini_shop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mini_shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mini_shop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -29,6 +32,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="31bJXVyTEG48Xi11sMO4teb7jzk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -132,7 +138,9 @@
       <workItem from="1758117406715" duration="11697000" />
       <workItem from="1758268131534" duration="2398000" />
       <workItem from="1758291399870" duration="4079000" />
-      <workItem from="1758376230293" duration="2847000" />
+      <workItem from="1758376230293" duration="6959000" />
+      <workItem from="1758392282432" duration="446000" />
+      <workItem from="1758462925074" duration="4901000" />
     </task>
     <servers />
   </component>
